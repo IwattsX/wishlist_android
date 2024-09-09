@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">wishlist</string>
+    <string name="submit">Submit</string>
+    <string name="enter_name_of_item">Enter name of item</string>
+    <string name="enter_url">Enter url</string>
+    <string name="cost_xx_xx">Cost: xx.xx</string>
 </resources>
