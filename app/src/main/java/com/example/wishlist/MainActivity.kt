@@ -6,7 +6,6 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.net.toUri
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -60,12 +59,18 @@ class MainActivity : AppCompatActivity() {
 
             }
             else {
-                Toast.makeText(it.context, "You entered everything", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(it.context, "You entered everything", Toast.LENGTH_SHORT).show()
                 val newItem = WLItem(itemsNameStr, itemCostStr, itemURIStr)
 
                 WLItems.add(newItem)
                 adapter.notifyItemInserted(adapter.itemCount - 1)
+
+                // Clear the text from the EditText
+                itemName.text.clear()
+                itemCost.text.clear()
+                itemURL.text.clear()
             }
+
 
         }
     }
